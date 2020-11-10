@@ -1,0 +1,204 @@
+/*General*/
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --primary: #2A7AE4;
+  --black: #000000;
+  --blackLighter: #9E9E9E;
+  --grayLight: #F5F5F5;
+  --grayMedium: #e5e5e5; 
+  --white: #FFFFFF;
+  --frontEnd: #6BD1FF;
+  --backEnd: #00C86F;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #464646;
+}
+
+a {
+  color: inherit;
+  text-decoration: none; font-weight: bold;
+} 
+
+.header{background: #efefef;}
+
+.nav {background: #000000; /*position: fixed;*/ border-bottom: 2px solid var(--primary);}
+  .nav a{text-align: center; padding: 10px 0; color: #FFFFFF; transition: opacity .3s;}
+  .nav a:hover{opacity: .5;}
+
+.buttonMob{text-align: right;}
+
+.address{float: left; line-height: 35px; text-align: center;}
+
+.image-gallery, .information{float: left;}
+
+.footer{display: flex; width: 100%; background: #38777E; padding: 15px 5%; font-weight: bold; line-height: 30px;}
+  .footer div:nth-child(1){flex-grow: 1; text-align: center; padding: 15px 0;}
+    .logoFooter{max-width: 168px;}
+  .footer div:nth-child(2){flex-grow: 5; color: #FFF;}
+
+/*Small Smartphones*/
+@media screen and (max-width: 480px) {
+  .header{display: flex; flex-direction: column;}
+
+  .nav{display: none; flex-direction: column; order: 2;}
+    .nav a{width: 100%;}
+
+  .buttonMob{order: 1; padding: 5px 5% 5px 0;}
+
+  .logo{position: absolute; top: 1; padding: 10px 5% 0%;}
+    .Logoo{max-width: 105px;}
+  
+  .address{order: 3; padding: 10px 5%; background: #000000;}
+    .address strong{color: var(--primary); font-size: 20px;}
+
+  .image-gallery{width: 100%; margin: 0 0%;}
+
+  .information{width: 60%;}
+    .information li{
+    list-style: none;
+    line-height: 40px;
+    padding-left: 45px;
+    background: url("/img/icon-seta.jpeg") no-repeat left center;
+    }
+
+.mapsLocal{float: left; width: 100%; margin: 53px 0;}
+  .mapsLocal iframe{border: none; width: 90%; height: 400px; margin: 0 5%;} 
+
+.footer{flex-direction: column; text-align: center;}
+
+}
+
+/*Medium Smartphones*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .header{display: flex; flex-direction: column;}
+
+  .nav{display: none; flex-direction: column; order: 2;}
+    .nav a{width: 100%;}
+
+  .buttonMob{order: 1; padding: 5px 5% 5px 0;}
+
+  .logo{position: absolute; top: 1; padding: 10px 5% 0%;}
+    .Logoo{max-width: 105px;}
+  
+  .address{order: 3; padding: 10px 5%; color: #6BD1FF; background: #000000;}
+    .address strong{/*color: var(--primary);*/ font-size: 20px;}
+
+  .image-gallery{width: 90%; margin: 0 5%;}
+
+  .information{width: 60%;}
+  .information li{
+    list-style: none;
+    line-height: 40px;
+    padding-left: 45px;
+    background: url("/img/icon-seta.jpeg") no-repeat left center;
+  }
+
+.mapsLocal{float: left; width: 100%; margin: 53px 0;}
+  .mapsLocal iframe{border: none; width: 90%; height: 400px; margin: 0 5%;} 
+
+.footer{flex-direction: column; text-align: center;}
+}
+
+/*Large Smartphones and small notebooks*/
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .header{float: left; width: 100%; box-shadow: 0 2px 10px #999999; margin-bottom: 20px;}
+
+  .nav{display: flex;}
+    .nav a{width: 25%;}
+    .nav a:hover{background: #666666;}
+
+  .buttonMob{float: right; width: 10%; padding: 5px 2% 5px 0;}
+  
+  .logo{float: left; width: 30%; padding: 15px 0 15px 10%;}
+    .Logoo{max-width: 168px;}
+
+  .address{width: 60%; padding: 20px 5% 10px 20%;}
+    .address strong{color: var(--primary); font-size: 27px;}
+
+  .image-gallery{width: 45%; margin: 0 5%;}
+
+  .information{width: 45%;}
+    .information li{
+    list-style: none;
+    line-height: 40px;
+    padding-left: 45px;
+    background: url("/img/icon-seta.jpeg") no-repeat left center;
+    }
+
+.mapsLocal{float: left; width: 100%; margin: 53px 0;}
+  .mapsLocal iframe{border: none; width: 90%; height: 400px; margin: 0 5%;} 
+}
+
+/*XLarges Screens*/
+@media screen and (min-width: 1200px) {
+  .header{float: left; width: 100%; box-shadow: 0 2px 10px #999999; margin-bottom: 20px;}
+
+  .nav{display: flex;}
+    .nav a{width: 25%;}
+    .nav a:hover{opacity: .5;}
+  
+  .buttonMob{float: right; width: 10%; padding: 5px 2% 5px 0;}
+
+  .logo{float: left; width: 30%; padding: 25px 0 15px 15%;}
+    .Logoo{max-width: 168px;}
+
+  .address{width: 60%; padding: 20px 5% 10px 20%;}
+    .address strong{color: var(--primary); font-size: 27px;}
+
+  .image-gallery{width: 45%; margin: 0 5%;}
+
+  .information{width: 45%;}
+    .information li{
+      list-style: none;
+      line-height: 40px;
+      padding-left: 45px;
+      background: url("/img/icon-seta.jpeg") no-repeat left center;
+    }
+
+  .mapsLocal{float: left; width: 100%; margin: 53px 0;}
+    .mapsLocal iframe{border: none; width: 90%; height: 400px; margin: 0 5%;} 
+
+  .formulario{display: flex; width: 50%; margin: 20px 25%; flex-direction: column;}
+    .formulario h1{color: #38777E; text-align: center; font-size: 30px;}
+    .formulario input{margin: 6px 0; height: 40px; color: #333;}
+    .formulario input[type='text'],
+    .formulario input[type='tel'],
+    .formulario input[type='email']{width: 100%; padding: 0 5px;}
+    .formulario input[type='submit']{background: #38777E; cursor: pointer; color: #FFFFFF; font-weight: bold; border: none; border-radius: 5px; width: 30%;}
+    .formulario textarea{width: 100%; height: 150px; color: #333; padding: 5px; margin: 6px 0;}
+
+  .vantagens{display: flex; width: 100%; flex-direction: row; justify-content: space-around; flex-wrap: wrap;}
+    .vantagensItem{width: 28%; margin: 15px 0; box-shadow: 0 5px 20px #999; text-align: center; padding: 15px;}
+}
+
+/*import React from 'react';
+import PropTypes from 'prop-types';
+
+function ButtonLink({ className, href, children }) {
+  return (
+    <a className={className} href={href}>
+      {children}
+    </a>
+  );
+}
+
+ButtonLink.defaultProps = {
+  href: '/',
+  className: '',
+};
+
+ButtonLink.propTypes = {
+  className: PropTypes.string,
+  href: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};
+
+export default ButtonLink;*/
